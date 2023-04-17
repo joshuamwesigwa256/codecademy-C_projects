@@ -1,9 +1,18 @@
 #include <stdio.h>
-int main() {
-  int planet = 1;
 
-  switch (planet) 
-{
+int main() {
+  char prompt_to_fight[4];
+  printf("Hello there, if you are reading this, you have been enlisted for the interplanetary boxing competitions, type \"yes\" if you agree to fight:\n");
+  scanf("%s", prompt_to_fight);
+if (prompt_to_fight != "yes")
+    printf("Invalid input, nevertheless, you have to fight\n");
+
+  int planet;
+  printf("What is your planet? (input any number from 1 to 7 to be assigned a planet plus the Relative Gravity there):\n");
+  scanf("%d", &planet);
+  
+
+  switch (planet) {
     case 1:
       printf("Mercury with the Relative Gravity of 0.38\n");
       break;
@@ -30,5 +39,7 @@ int main() {
       break;
 
   }
+  printf("Thankyou for the bravery, you will receive an email with the details of when you are set to travel and battle the aliens. I promise you, you are bound to lose\n");
+
 
 }
